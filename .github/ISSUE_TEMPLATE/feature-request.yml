@@ -1,0 +1,79 @@
+
+name: "💡 Suggest an improvement"
+description: "Share an idea to make DontStayRooky better."
+title: "[FEATURE] "
+labels:
+  - enhancement
+
+body:
+  - type: input
+    id: pseudo
+    attributes:
+      label: "1. Your first name or username"
+      placeholder: "e.g. Knight42"
+    validations:
+      required: false
+
+  - type: input
+    id: resume
+    attributes:
+      label: "2. Improvement summary"
+      description: "Describe your idea in one sentence."
+      placeholder: "e.g. Add a progress indicator to training sessions."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: "3. Which part of the app is concerned?"
+      description: "Select the relevant module."
+      options:
+        - Training paths
+        - Tactics and puzzles
+        - Openings
+        - Endgames
+        - Game analysis
+        - Cognitive training
+        - Rewards and progression
+        - User interface
+        - Account and profile
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: besoin
+    attributes:
+      label: "4. What problem would this solve?"
+      description: "Explain your needs or what is currently missing."
+      placeholder: "What are you trying to achieve?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposition
+    attributes:
+      label: "5. How would you like it to work?"
+      description: "Describe your idea. You can include an example."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: importance
+    attributes:
+      label: "6. How important is this improvement to you?"
+      options:
+        - "Essential — I really need this"
+        - "Useful — it would improve my experience"
+        - "Nice to have — it would be a bonus"
+    validations:
+      required: true
+
+  - type: textarea
+    id: complement
+    attributes:
+      label: "7. Additional details"
+      description: "Anything else that could help us understand your idea?"
+    validations:
+      required: false

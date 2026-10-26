@@ -1,0 +1,100 @@
+
+name: "🐛 Report a bug"
+description: "Describe the issue you encountered on DontStayRooky."
+title: "[BUG] "
+labels:
+  - bug
+
+body:
+  - type: input
+    id: pseudo
+    attributes:
+      label: "1. Your first name or username"
+      placeholder: "e.g. Knight42"
+    validations:
+      required: false
+
+  - type: input
+    id: resume
+    attributes:
+      label: "2. Problem summary"
+      description: "Describe the issue in one sentence."
+      placeholder: "e.g. The Submit button does not work."
+    validations:
+      required: true
+
+  - type: input
+    id: ecran
+    attributes:
+      label: "3. Where does it happen?"
+      description: "Specify the screen or page where the issue occurs."
+      placeholder: "e.g. Tactics training, step 3"
+    validations:
+      required: false
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: "4. Steps to reproduce the bug"
+      description: "Describe the actions required, one per line."
+      placeholder: |
+        1. Open the tactics training module
+        2. Start an exercise
+        3. Click Submit
+    validations:
+      required: true
+
+  - type: textarea
+    id: attendu
+    attributes:
+      label: "5. Expected result"
+      description: "What did you expect to happen?"
+    validations:
+      required: false
+
+  - type: textarea
+    id: obtenu
+    attributes:
+      label: "6. Actual result"
+      description: "What actually happened?"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: gravite
+    attributes:
+      label: "7. Severity"
+      description: "Assess the impact of the issue."
+      options:
+        - "Blocking — I can no longer use the app"
+        - "Major — I can work around the issue"
+        - "Minor — visual or text issue"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequence
+    attributes:
+      label: "8. Frequency"
+      options:
+        - "Happened only once"
+        - "Happens occasionally"
+        - "Happens every time"
+    validations:
+      required: true
+
+  - type: upload
+    id: piece_jointe
+    attributes:
+      label: "9. Screenshot or video"
+      description: "Optional. Attach a screenshot or video showing the issue."
+    validations:
+      required: false
+
+  - type: input
+    id: environnement
+    attributes:
+      label: "10. Device and browser"
+      placeholder: "e.g. Chrome on Windows 11"
+    validations:
+      required: false
